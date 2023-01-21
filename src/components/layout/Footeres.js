@@ -23,6 +23,7 @@ const Footeres = () => {
     document.body.addEventListener("click", (e) => {
       if (ref.current.contains(e.target)) {
         setShow(true);
+        console.log("hi",ref.current.contains(e.target))
       } else {
         setShow(false);
       }
@@ -57,7 +58,7 @@ const Footeres = () => {
                       <ListItem
                         className="font-dm text-sm  hover:font-bold "
                         itemName="Home"
-                        href="#"
+                        href="/"
                       />
                       <ListItem
                         className="font-regular font-dm text-sm hover:font-bold "

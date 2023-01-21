@@ -101,7 +101,7 @@ const Newarriavl = ({ title }) => {
       <Container className="relative">
         <Heading title="New Arrivals" />
 
-        <Slider {...settings} >
+        <Slider {...settings} className="!r-0" >
           <div className=" ">
             <Product
               src="assets/p1.png"

@@ -2,7 +2,7 @@ import React from "react";
 
 const Badge = ({ title }) => {
   return (
-    <span className=" absolute top-3 sm:top-5 left-3 sm:left-5 inline-block bg-primary py-[5py] sm:py-[9px] px-4 sm:px-8 text-center font-dm text-sm font-bold text-[#fff]">
+    <span className=" absolute top-1 xl:top-5 xl:left-5 left-1 inline-block bg-primary xl:py-[9px] xl:px-4   text-center font-dm text-[10px] xl:text-sm font-bold text-[#fff]">
       {title}
     </span>
   );

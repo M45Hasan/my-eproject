@@ -9,63 +9,68 @@ import { FaShoppingCart } from "react-icons/fa";
 const Product = ({ src, badge, Pname, Price, Color, className, title }) => {
   return (
     <>
-      <div className="group relative overflow-y-hidden">
-        <Image imgsrc={src} />
-        {badge && <Badge title={title} />}
-        <div className="absolute lg:bottom-[-55%] bottom-[-110%] left-0 lg:h-40 h-20 w-full bg-[#ffffffb6] lg:py-6 py-3 px-0 sm:px-7 duration-300 ease-in group-hover:bottom-0">
-          <Flex className="flex items-center justify-end gap-x-2 sm:gap-x-3">
-            <p className="   font-dm text-[12px] font-normal text-[#767676] lg:text-base ">
-              Add to Wish Listy
-            </p>
-            <BsFillSuitHeartFill className="   lg:text-base" />
-          </Flex>
+      <div className=" xl:w-fit w-[110px] sm:w-[150px] lg:w-56 md:w-[160px]">  {/*image cell size */}
+        <div className="group relative overflow-y-hidden">
+          <div className=" ">
+            {" "}
+            <Image imgsrc={src} />
+          </div>
 
-          <Flex className="flex items-center justify-end gap-x-3">
-            <p className="my-[8px] font-dm  lg:text-base text-xs  font-normal text-[#767676] lg:my-[21px]">
-              Compare
-            </p>
-            <TiArrowRepeat className="   lg:text-base" />
-          </Flex>
-          <Flex className="flex items-center justify-end gap-x-3">
-            <p className=" font-dm text-[12px] lg:text-base font-bold text-[#262626]">
-              Add to Cart
-            </p>
-            <FaShoppingCart className="   lg:text-base" />
-          </Flex>
+          {badge && <Badge title={title} />}
+          <div className="absolute bottom-[-110%] left-0 h-20 w-full bg-[#ffffffb6] py-3 px-0 duration-300 ease-in group-hover:bottom-0  lg:bottom-[-60%] lg:h-32 xl:h-40 lg:py-3 xl:py-6">
+            <Flex className="flex items-center justify-end gap-x-2 sm:gap-x-3">
+              <p className="   font-dm text-[10px] font-normal text-[#767676] lg:text-base ">
+                Add to Wish Listy
+              </p>
+              <BsFillSuitHeartFill className="   lg:text-base" />
+            </Flex>
+
+            <Flex className="flex items-center justify-end gap-x-3">
+              <p className="my-[4px] font-dm  text-xs font-normal  text-[#767676] lg:my-[21px] lg:text-base">
+                Compare
+              </p>
+              <TiArrowRepeat className="   lg:text-base" />
+            </Flex>
+            <Flex className="flex items-center justify-end gap-x-3">
+              <p className=" font-dm text-[10px] font-bold text-[#262626] lg:text-base">
+                Add to Cart
+              </p>
+              <FaShoppingCart className="   lg:text-base" />
+            </Flex>
+          </div>
         </div>
-      </div>
-      <div>
-        <Flex className="mt-0 sm:mt-6 block sm:flex sm:justify-between items-baseline">
-          <h3 className="xl:text-xl lg:text-base text-xs font-dm font-bold text-left">
-            {Pname}
-          </h3>
-          <div className=" flex items-center justify-between sm:hidden items-baseline">
-            <p className="font-dm lg:text-[16px] text-xs font-normal text-[#767676] ">
+        <div>
+          <Flex className="mt-0 block items-baseline sm:mt-6 sm:flex sm:justify-between">
+            <h3 className="text-left font-dm text-xs font-bold lg:text-base xl:text-xl">
+              {Pname}
+            </h3>
+            <p className="font-dm text-xs font-normal text-[#767676] lg:text-[16px] ">
               {Price}
             </p>
-            <p className={className} >
-              {className === "text-[white]" && (
-                <span className="font-dm   lg:text-[16px] text-xs font-normal text-[black]">
+            <div className=" flex  items-baseline justify-between sm:hidden">
+              <p className={className}>
+                {className === "text-[white]" && (
+                  <span className="font-dm   text-xs font-normal text-[black] lg:text-[16px]">
+                    {Color}
+                  </span>
+                )}
+                <span className="font-dm text-xs font-normal lg:text-[16px]">
                   {Color}
                 </span>
-              )}
-              <span className="font-dm lg:text-[16px] text-xs font-normal">{Color}</span>
-            </p>
-          </div>
-          <p className="hidden pr-7 font-dm lg:text-[16px] text-xs font-normal text-[#767676] sm:block">
-            {Price}
-          </p>
-        </Flex>
-        <p className={className}>
-          {className === "text-[white]" && (
-            <span className="hidden font-dm lg:text-[16px] text-xs font-normal text-[black] sm:block">
+              </p>
+            </div>
+          </Flex>
+          <p className={className}>
+            {className === "text-[white]" && (
+              <span className="hidden font-dm text-xs font-normal text-[black] sm:block lg:text-[16px]">
+                {Color}
+              </span>
+            )}
+            <span className="hidden font-dm text-xs font-normal sm:block lg:text-[16px]">
               {Color}
             </span>
-          )}
-          <span className="hidden font-dm lg:text-[16px] text-xs font-normal sm:block">
-            {Color}
-          </span>
-        </p>
+          </p>
+        </div>
       </div>
     </>
   );

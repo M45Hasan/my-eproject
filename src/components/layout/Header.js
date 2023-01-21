@@ -24,7 +24,7 @@ const Header = () => {
   let cartRef = useRef();
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
-      console.log(e.target);
+      
       if (ref.current.contains(e.target)) {
         setShow(true);
       } else {

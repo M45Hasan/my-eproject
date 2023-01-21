@@ -18,8 +18,8 @@ const FooterTop = () => {
         <div className="w-[13%]">
           <FooterHead>MENU</FooterHead>
           <List>
-            <FooterLink itemName="Home" href="#" />
-            <FooterLink itemName="Shop" href="#" />
+            <FooterLink itemName="Home" href="/" />
+            <FooterLink itemName="Shop" href="/products" />
             <FooterLink itemName="About" href="#" />
             <FooterLink itemName="Contact" href="#" />
             <FooterLink itemName="Journal" href="#" />

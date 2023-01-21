@@ -40,6 +40,7 @@ const Navbar = () => {
                 <ListItem
                   className="font-dm text-sm font-bold hover:font-bold "
                   itemName="Home"
+                  href="/"
                 />
                 <ListItem
                   className="font-regular font-dm text-sm hover:font-bold "
